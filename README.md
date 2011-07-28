@@ -35,7 +35,12 @@ To push a viewController, simply call
 - (void)pushViewController:(UIViewController *)viewController afterViewController:(UIViewController *)afterViewController animated:(BOOL)animated;
 ```
 
+* viewController: the view controller, that will be pushes
+* afterViewController: the view controller, after which viewController should appear. **Note**: if afterViewController is `nil`
+* animated: push animated or not
+
 *Sample*:
+
 ```objective-c
 UIViewController *nextViewController = ...;
 [self.advancedNavigationController pushViewController:nextViewController afterViewController:self animated:YES];

@@ -4,7 +4,7 @@
 
 ## Setup ANAdvancedNavigationController for your project
 
-* link against the *QuartzCore.framework*
+* link against <**QuartzCore.framework**>
 * add the *ANAdvancedNavigationController* folder to your project
 
 ## How to use ANAdvancedNavigationController

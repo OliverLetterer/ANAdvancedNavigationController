@@ -17,7 +17,7 @@ const CGFloat ANAdvancedNavigationControllerDefaultViewControllerWidth      = 47
 const CGFloat ANAdvancedNavigationControllerDefaultLeftPanningOffset        = 75.0f;
 
 const CGFloat ANAdvancedNavigationControllerDefaultAnimationDuration        = 0.35f;
-const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 473.0f;// = ANAdvancedNavigationControllerDefaultViewControllerWidth - 2.0f
+const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 473.0f;
 
 @implementation ANAdvancedNavigationController
 
@@ -120,7 +120,6 @@ const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 47
     [self.view insertSubview:self.removeRectangleIndicatorView atIndex:0];
 }
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -135,10 +134,6 @@ const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 47
     [super viewDidUnload];
     _removeRectangleIndicatorView = nil;
     _draggingStartDate = nil;
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
 }
 
 #pragma mark - rotation

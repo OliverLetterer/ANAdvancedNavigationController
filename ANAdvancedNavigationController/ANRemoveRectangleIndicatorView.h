@@ -16,6 +16,10 @@ typedef enum {
     ANRemoveRectangleIndicatorViewStateRemovedRight
 } ANRemoveRectangleIndicatorViewState;
 
+
+
+
+
 @interface ANRemoveRectangleIndicatorView : UIView {
     ANRectangleView *_firstRectangleView;
     ANRectangleView *_secondRectangleView;

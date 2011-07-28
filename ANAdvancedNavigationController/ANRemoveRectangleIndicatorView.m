@@ -8,10 +8,9 @@
 
 #import "ANRemoveRectangleIndicatorView.h"
 
-#define ANIMATION_DURATION 0.15f
+static CGFloat kANRemoveRectangleIndicatorViewAnimationDuration = 0.15f;
 
 @implementation ANRemoveRectangleIndicatorView
-
 @synthesize firstRectangleView=_firstRectangleView, secondRectangleView=_secondRectangleView, state=_state;
 
 - (void)setState:(ANRemoveRectangleIndicatorViewState)state {
@@ -20,7 +19,7 @@
 
 - (void)setState:(ANRemoveRectangleIndicatorViewState)state animated:(BOOL)animated {
     if (state != _state) {
-        __block CGFloat animationDuration = ANIMATION_DURATION;
+        __block CGFloat animationDuration = kANRemoveRectangleIndicatorViewAnimationDuration;
         void(^animationBlock)(void) = ^(void) {
             switch (state) {
                 case ANRemoveRectangleIndicatorViewStateHidden:
@@ -46,7 +45,6 @@
                     _secondRectangleView.center = _secondRectangleViewRemovedCenterPoint;
                     _secondRectangleView.transform = CGAffineTransformMakeRotation(M_PI / 2.0f);
                     _secondRectangleView.alpha = 0.5f;
-                    animationDuration = 0.35f;
                     break;
                 default:
                     break;
@@ -63,12 +61,10 @@
     }
 }
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
+- (id)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
         // Initialization code
-        CGFloat topOffset = 20.0f;
+        static CGFloat topOffset = 20.0f;
         CGFloat width = CGRectGetWidth(self.bounds)/2.5f;
         self.backgroundColor = [UIColor clearColor];
         _firstRectangleView = [[ANRectangleView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, width, CGRectGetHeight(self.bounds)-topOffset)];

@@ -14,6 +14,8 @@ extern const CGFloat ANAdvancedNavigationControllerDefaultLeftPanningOffset;
 
 @class ANAdvancedNavigationController;
 
+
+
 @protocol ANAdvancedNavigationControllerDelegate <NSObject>
 
 @optional
@@ -24,6 +26,10 @@ extern const CGFloat ANAdvancedNavigationControllerDefaultLeftPanningOffset;
 - (void)advancedNavigationController:(ANAdvancedNavigationController *)navigationController didPopToViewController:(UIViewController *)viewController animated:(BOOL)animated;
 
 @end
+
+
+
+
 
 @interface ANAdvancedNavigationController : UIViewController
 

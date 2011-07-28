@@ -7,34 +7,25 @@
 //
 
 #import "ANRectangleView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation ANRectangleView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
+- (id)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
+        self.layer.needsDisplayOnBoundsChange = YES;
     }
     return self;
-}
-
-- (void)setFrame:(CGRect)frame {
-    CGRect bounds = self.bounds;
-    [super setFrame:frame];
-    
-    if (!CGRectEqualToRect(self.bounds, bounds)) {
-        [self setNeedsDisplay];
-    }
 }
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    CGFloat inset = 5.0f;
-    UIBezierPath *roundRectPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(inset, inset, CGRectGetWidth(rect)-2.0f*inset, CGRectGetHeight(rect)-2.0f*inset) cornerRadius:10.0f];
+    static CGFloat inset = 5.0f;
+    UIBezierPath *roundRectPath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(rect, inset, inset) cornerRadius:10.0f];
     [[UIColor colorWithWhite:0.0f alpha:0.25f] setFill];
     
     [roundRectPath fill];

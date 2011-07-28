@@ -27,6 +27,6 @@
 }
 ```
 
-## Screenshots in [iHub - Social Coding](http://itunes.apple.com/de/app/ihub-social-coding/id433507459?mt=8)
+## Screenshots in my application [iHub - Social Coding](http://itunes.apple.com/de/app/ihub-social-coding/id433507459?mt=8)
 <img src="https://github.com/OliverLetterer/ANAdvancedNavigationController/raw/master/Screenshots/1.jpg">
 <img src="https://github.com/OliverLetterer/ANAdvancedNavigationController/raw/master/Screenshots/2.jpg">

@@ -13,16 +13,14 @@
 
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // create your viewControllers that are displayed
+    // create the viewControllers that are displayed
     UIViewController *leftViewController = ...;
+
     // create an instance of ANAdvancedNavigationController
     ANAdvancedNavigationController *navigationController = [[ANAdvancedNavigationController alloc] initWithLeftViewController:leftViewController];
     
-    // set your instance of ANAdvancedNavigationController as your applicationDelegates self.window.rootViewController
+    // set your instance of ANAdvancedNavigationController as your applicationDelegates rootViewController
     self.window.rootViewController = navigationController;
-    
-    // do some more setup
-    ....
 
     [self.window makeKeyAndVisible];
     return YES;

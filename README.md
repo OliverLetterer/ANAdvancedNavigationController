@@ -27,6 +27,27 @@
 }
 ```
 
-## Screenshots in [iHub - Social Coding](http://itunes.apple.com/de/app/ihub-social-coding/id433507459?mt=8)
-<img src="https://github.com/OliverLetterer/ANAdvancedNavigationController/blob/master/Screenshots/1.PNG">
-<img src="https://github.com/OliverLetterer/ANAdvancedNavigationController/raw/master/Screenshots/2.png">
+### Push a view controller
+
+To push a viewController, simply call
+
+```objective-c
+- (void)pushViewController:(UIViewController *)viewController afterViewController:(UIViewController *)afterViewController animated:(BOOL)animated;
+```
+
+* `viewController`: the view controller, that will be pushed
+* `afterViewController`: the view controller, after which `viewController` should appear. **Note**: if `afterViewController` is `nil`, all right view controllers will be popped and `viewController` will be the first on the stack.
+* `animated`: push animated or not
+
+*Sample*:
+
+```objective-c
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *nextViewController = ...;
+    [self.advancedNavigationController pushViewController:nextViewController afterViewController:self animated:YES];
+}
+```
+
+## Screenshots in my application [iHub - Social Coding](http://itunes.apple.com/de/app/ihub-social-coding/id433507459?mt=8)
+<img src="https://github.com/OliverLetterer/ANAdvancedNavigationController/raw/master/Screenshots/1.jpg">
+<img src="https://github.com/OliverLetterer/ANAdvancedNavigationController/raw/master/Screenshots/2.jpg">

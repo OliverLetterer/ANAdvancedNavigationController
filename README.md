@@ -27,6 +27,20 @@
 }
 ```
 
+### Push a view controller
+
+To push a viewController, simply call
+
+```objective-c
+- (void)pushViewController:(UIViewController *)viewController afterViewController:(UIViewController *)afterViewController animated:(BOOL)animated;
+```
+
+*Sample*:
+```objective-c
+UIViewController *nextViewController = ...;
+[self.advancedNavigationController pushViewController:nextViewController afterViewController:self animated:YES];
+```
+
 ## Screenshots in my application [iHub - Social Coding](http://itunes.apple.com/de/app/ihub-social-coding/id433507459?mt=8)
 <img src="https://github.com/OliverLetterer/ANAdvancedNavigationController/raw/master/Screenshots/1.jpg">
 <img src="https://github.com/OliverLetterer/ANAdvancedNavigationController/raw/master/Screenshots/2.jpg">

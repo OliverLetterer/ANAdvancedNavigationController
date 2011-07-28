@@ -35,15 +35,17 @@ To push a viewController, simply call
 - (void)pushViewController:(UIViewController *)viewController afterViewController:(UIViewController *)afterViewController animated:(BOOL)animated;
 ```
 
-* viewController: the view controller, that will be pushes
-* afterViewController: the view controller, after which viewController should appear. **Note**: if afterViewController is `nil`
-* animated: push animated or not
+* `viewController`: the view controller, that will be pushed
+* `afterViewController`: the view controller, after which `viewController` should appear. **Note**: if `afterViewController` is `nil`, all right view controllers will be popped and `viewController` will be the first on the stack.
+* `animated`: push animated or not
 
 *Sample*:
 
 ```objective-c
-UIViewController *nextViewController = ...;
-[self.advancedNavigationController pushViewController:nextViewController afterViewController:self animated:YES];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *nextViewController = ...;
+    [self.advancedNavigationController pushViewController:nextViewController afterViewController:self animated:YES];
+}
 ```
 
 ## Screenshots in my application [iHub - Social Coding](http://itunes.apple.com/de/app/ihub-social-coding/id433507459?mt=8)

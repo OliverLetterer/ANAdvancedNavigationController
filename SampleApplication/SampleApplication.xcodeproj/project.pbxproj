@@ -13,6 +13,15 @@
 		A75797F513E1AD15008670B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A75797F313E1AD15008670B0 /* InfoPlist.strings */; };
 		A75797F713E1AD15008670B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A75797F613E1AD15008670B0 /* main.m */; };
 		A75797FB13E1AD15008670B0 /* SampleApplicationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A75797FA13E1AD15008670B0 /* SampleApplicationAppDelegate.m */; };
+		A757981613E1ADCC008670B0 /* ANAdvancedNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A757980713E1ADCC008670B0 /* ANAdvancedNavigationController.m */; };
+		A757981713E1ADCC008670B0 /* ANRectangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A757980913E1ADCC008670B0 /* ANRectangleView.m */; };
+		A757981813E1ADCC008670B0 /* ANRemoveRectangleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A757980B13E1ADCC008670B0 /* ANRemoveRectangleIndicatorView.m */; };
+		A757981913E1ADCC008670B0 /* ANAdvancedNavigationController+LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A757981013E1ADCC008670B0 /* ANAdvancedNavigationController+LeftViewController.m */; };
+		A757981A13E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers+Anchors.m in Sources */ = {isa = PBXBuildFile; fileRef = A757981313E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers+Anchors.m */; };
+		A757981B13E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = A757981513E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers.m */; };
+		A757981F13E1AEE3008670B0 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A757981E13E1AEE3008670B0 /* LeftViewController.m */; };
+		A757982213E1AF1A008670B0 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A757982113E1AF1A008670B0 /* RightViewController.m */; };
+		A757982413E1AFA2008670B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A757982313E1AFA2008670B0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,24 @@
 		A75797F813E1AD15008670B0 /* SampleApplication-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApplication-Prefix.pch"; sourceTree = "<group>"; };
 		A75797F913E1AD15008670B0 /* SampleApplicationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleApplicationAppDelegate.h; sourceTree = "<group>"; };
 		A75797FA13E1AD15008670B0 /* SampleApplicationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleApplicationAppDelegate.m; sourceTree = "<group>"; };
+		A757980613E1ADCC008670B0 /* ANAdvancedNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAdvancedNavigationController.h; sourceTree = "<group>"; };
+		A757980713E1ADCC008670B0 /* ANAdvancedNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAdvancedNavigationController.m; sourceTree = "<group>"; };
+		A757980813E1ADCC008670B0 /* ANRectangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANRectangleView.h; sourceTree = "<group>"; };
+		A757980913E1ADCC008670B0 /* ANRectangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRectangleView.m; sourceTree = "<group>"; };
+		A757980A13E1ADCC008670B0 /* ANRemoveRectangleIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANRemoveRectangleIndicatorView.h; sourceTree = "<group>"; };
+		A757980B13E1ADCC008670B0 /* ANRemoveRectangleIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRemoveRectangleIndicatorView.m; sourceTree = "<group>"; };
+		A757980D13E1ADCC008670B0 /* ANAdvancedNavigationController+private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANAdvancedNavigationController+private.h"; sourceTree = "<group>"; };
+		A757980F13E1ADCC008670B0 /* ANAdvancedNavigationController+LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANAdvancedNavigationController+LeftViewController.h"; sourceTree = "<group>"; };
+		A757981013E1ADCC008670B0 /* ANAdvancedNavigationController+LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANAdvancedNavigationController+LeftViewController.m"; sourceTree = "<group>"; };
+		A757981213E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers+Anchors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANAdvancedNavigationController+RightViewControllers+Anchors.h"; sourceTree = "<group>"; };
+		A757981313E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers+Anchors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANAdvancedNavigationController+RightViewControllers+Anchors.m"; sourceTree = "<group>"; };
+		A757981413E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANAdvancedNavigationController+RightViewControllers.h"; sourceTree = "<group>"; };
+		A757981513E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ANAdvancedNavigationController+RightViewControllers.m"; sourceTree = "<group>"; };
+		A757981D13E1AEE3008670B0 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		A757981E13E1AEE3008670B0 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		A757982013E1AF1A008670B0 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		A757982113E1AF1A008670B0 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		A757982313E1AFA2008670B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A757982413E1AFA2008670B0 /* QuartzCore.framework in Frameworks */,
 				A75797EB13E1AD15008670B0 /* UIKit.framework in Frameworks */,
 				A75797ED13E1AD15008670B0 /* Foundation.framework in Frameworks */,
 				A75797EF13E1AD15008670B0 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +90,7 @@
 		A75797E913E1AD15008670B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A757982313E1AFA2008670B0 /* QuartzCore.framework */,
 				A75797EA13E1AD15008670B0 /* UIKit.framework */,
 				A75797EC13E1AD15008670B0 /* Foundation.framework */,
 				A75797EE13E1AD15008670B0 /* CoreGraphics.framework */,
@@ -72,6 +101,8 @@
 		A75797F013E1AD15008670B0 /* SampleApplication */ = {
 			isa = PBXGroup;
 			children = (
+				A757981C13E1AEE3008670B0 /* ViewControllers */,
+				A757980513E1ADCC008670B0 /* ANAdvancedNavigationController */,
 				A75797F913E1AD15008670B0 /* SampleApplicationAppDelegate.h */,
 				A75797FA13E1AD15008670B0 /* SampleApplicationAppDelegate.m */,
 				A75797F113E1AD15008670B0 /* Supporting Files */,
@@ -88,6 +119,62 @@
 				A75797F813E1AD15008670B0 /* SampleApplication-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A757980513E1ADCC008670B0 /* ANAdvancedNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				A757980613E1ADCC008670B0 /* ANAdvancedNavigationController.h */,
+				A757980713E1ADCC008670B0 /* ANAdvancedNavigationController.m */,
+				A757980813E1ADCC008670B0 /* ANRectangleView.h */,
+				A757980913E1ADCC008670B0 /* ANRectangleView.m */,
+				A757980A13E1ADCC008670B0 /* ANRemoveRectangleIndicatorView.h */,
+				A757980B13E1ADCC008670B0 /* ANRemoveRectangleIndicatorView.m */,
+				A757980C13E1ADCC008670B0 /* Private */,
+			);
+			name = ANAdvancedNavigationController;
+			path = ../../ANAdvancedNavigationController;
+			sourceTree = "<group>";
+		};
+		A757980C13E1ADCC008670B0 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				A757980D13E1ADCC008670B0 /* ANAdvancedNavigationController+private.h */,
+				A757980E13E1ADCC008670B0 /* LeftViewController */,
+				A757981113E1ADCC008670B0 /* RightViewControllers */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		A757980E13E1ADCC008670B0 /* LeftViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A757980F13E1ADCC008670B0 /* ANAdvancedNavigationController+LeftViewController.h */,
+				A757981013E1ADCC008670B0 /* ANAdvancedNavigationController+LeftViewController.m */,
+			);
+			path = LeftViewController;
+			sourceTree = "<group>";
+		};
+		A757981113E1ADCC008670B0 /* RightViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A757981213E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers+Anchors.h */,
+				A757981313E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers+Anchors.m */,
+				A757981413E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers.h */,
+				A757981513E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers.m */,
+			);
+			path = RightViewControllers;
+			sourceTree = "<group>";
+		};
+		A757981C13E1AEE3008670B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A757981D13E1AEE3008670B0 /* LeftViewController.h */,
+				A757981E13E1AEE3008670B0 /* LeftViewController.m */,
+				A757982013E1AF1A008670B0 /* RightViewController.h */,
+				A757982113E1AF1A008670B0 /* RightViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +241,14 @@
 			files = (
 				A75797F713E1AD15008670B0 /* main.m in Sources */,
 				A75797FB13E1AD15008670B0 /* SampleApplicationAppDelegate.m in Sources */,
+				A757981613E1ADCC008670B0 /* ANAdvancedNavigationController.m in Sources */,
+				A757981713E1ADCC008670B0 /* ANRectangleView.m in Sources */,
+				A757981813E1ADCC008670B0 /* ANRemoveRectangleIndicatorView.m in Sources */,
+				A757981913E1ADCC008670B0 /* ANAdvancedNavigationController+LeftViewController.m in Sources */,
+				A757981A13E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers+Anchors.m in Sources */,
+				A757981B13E1ADCC008670B0 /* ANAdvancedNavigationController+RightViewControllers.m in Sources */,
+				A757981F13E1AEE3008670B0 /* LeftViewController.m in Sources */,
+				A757982213E1AF1A008670B0 /* RightViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

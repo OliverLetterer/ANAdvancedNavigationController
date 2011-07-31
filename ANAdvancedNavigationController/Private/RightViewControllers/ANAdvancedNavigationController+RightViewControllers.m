@@ -92,10 +92,11 @@
 
 - (void)__pushViewController:(UIViewController *)viewController afterViewController:(UIViewController *)afterViewController animated:(BOOL)animated {
     if ([self.viewControllers containsObject:viewController]) {
-        [NSException raise:NSInternalInconsistencyException format:@"viewController (%@) is already part of the viewController Hierarchy", viewController];
+        NSLog(@"viewController (%@) is already part of the viewController Hierarchy", viewController);
+        return;
     }
     if (![self.viewControllers containsObject:afterViewController]) {
-        [NSException raise:NSInternalInconsistencyException format:@"afterViewController (%@) is not part of the viewController Hierarchy", afterViewController];
+        NSLog(@"afterViewController (%@) is not part of the viewController Hierarchy", afterViewController);
     }
     
     NSUInteger afterIndex = [self.viewControllers indexOfObject:afterViewController]+1;
@@ -160,7 +161,8 @@
 
 - (void)__removeRightViewController:(UIViewController *)rightViewController animated:(BOOL)animated {
     if (![self.viewControllers containsObject:rightViewController]) {
-        [NSException raise:NSInternalInconsistencyException format:@"rightViewController (%@) is not part of the viewController Hierarchy", rightViewController];
+        NSLog(@"rightViewController (%@) is not part of the viewController Hierarchy", rightViewController);
+        return;
     }
     
     [rightViewController willMoveToParentViewController:nil];
@@ -475,7 +477,8 @@
 
 - (void)_setIndexOfFrontViewController:(NSUInteger)indexOfFrontViewController {
     if (!(indexOfFrontViewController < self.viewControllers.count)) {
-        [NSException raise:NSInternalInconsistencyException format:@"indexOfFrontViewController (%d) exceeds viewControllers bounds (%d)", indexOfFrontViewController, self.viewControllers.count];
+        NSLog(@"indexOfFrontViewController (%d) exceeds viewControllers bounds (%d)", indexOfFrontViewController, self.viewControllers.count);
+        return;
     }
     
     if (indexOfFrontViewController != _indexOfFrontViewController) {
@@ -494,10 +497,12 @@
     // first lets do some concistency checks
     if ([self.viewControllers containsObject:viewController] || _leftViewController == viewController) {
         // viewController cant be part of the current viewController hierarchy
-        [NSException raise:NSInternalInconsistencyException format:@"viewController (%@) is already part of the viewController Hierarchy", viewController];
+        NSLog(@"viewController (%@) is already part of the viewController Hierarchy", viewController);
+        return;
     }
     if (![self.viewControllers containsObject:afterViewController] && afterViewController != nil) {
-        [NSException raise:NSInternalInconsistencyException format:@"afterViewController (%@) is not part of the viewController Hierarchy", afterViewController];
+        NSLog(@"afterViewController (%@) is not part of the viewController Hierarchy", afterViewController);
+        return;
     }
     
     if (afterViewController == _leftViewController) {
@@ -516,7 +521,8 @@
 
 - (void)_popViewControllersToViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (![self.viewControllers containsObject:viewController]) {
-        [NSException raise:NSInternalInconsistencyException format:@"viewController (%@) is not part of the viewController Hierarchy", viewController];
+        NSLog(@"viewController (%@) is not part of the viewController Hierarchy", viewController);
+        return;
     }
     
     NSArray *oldArray = [self.viewControllers copy];

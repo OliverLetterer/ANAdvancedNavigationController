@@ -90,7 +90,8 @@ const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 47
 
 - (void)popViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (![self.viewControllers containsObject:viewController]) {
-        [NSException raise:NSInternalInconsistencyException format:@"viewController (%@) is not part of the viewController Hierarchy", viewController];
+        NSLog(@"viewController (%@) is not part of the viewController Hierarchy", viewController);
+        return;
     }
     
     NSInteger index = [self.viewControllers indexOfObject:viewController]-1;

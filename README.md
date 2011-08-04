@@ -4,7 +4,7 @@
 
 ## Setup ANAdvancedNavigationController for your project
 
-* add the *ANAdvancedNavigationController* as a static Library to your project
+* add *ANAdvancedNavigationController* as a static Library to your project
 
 ## How to use ANAdvancedNavigationController
 

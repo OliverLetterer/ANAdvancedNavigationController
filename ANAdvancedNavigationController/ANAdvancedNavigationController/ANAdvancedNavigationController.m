@@ -137,6 +137,56 @@ const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 47
     _draggingStartDate = nil;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    for (UIViewController *viewController in self.childViewControllers) {
+        [viewController viewWillDisappear:animated];
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    for (UIViewController *viewController in self.childViewControllers) {
+        [viewController viewDidDisappear:animated];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    static BOOL isFirstViewWillAppear = YES;
+    
+    // we dont need to inform childViewControllers in our first viewWillAppear because this is handled in viewDidLoad.
+    if (!isFirstViewWillAppear) {
+        for (UIViewController *viewController in self.childViewControllers) {
+            [viewController viewWillAppear:animated];
+        }
+    }
+    
+    isFirstViewWillAppear = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    static BOOL isFirstViewDidAppear = YES;
+    
+    // we dont need to inform childViewControllers in our first viewDidAppear because this is handled in viewDidLoad.
+    if (!isFirstViewDidAppear) {
+        for (UIViewController *viewController in self.childViewControllers) {
+            [viewController viewDidAppear:animated];
+        }
+    }
+    
+    isFirstViewDidAppear = NO;
+}
+
 #pragma mark - rotation
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

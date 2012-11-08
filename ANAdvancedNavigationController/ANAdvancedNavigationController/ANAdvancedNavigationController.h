@@ -24,6 +24,7 @@ extern const CGFloat ANAdvancedNavigationControllerDefaultLeftPanningOffset;
 
 - (void)advancedNavigationController:(ANAdvancedNavigationController *)navigationController willPopToViewController:(UIViewController *)viewController animated:(BOOL)animated;
 - (void)advancedNavigationController:(ANAdvancedNavigationController *)navigationController didPopToViewController:(UIViewController *)viewController animated:(BOOL)animated;
+- (void)advancedNavigationController:(ANAdvancedNavigationController *)navigationController isLeftViewOverlapped:(BOOL)overlapped;
 
 @end
 

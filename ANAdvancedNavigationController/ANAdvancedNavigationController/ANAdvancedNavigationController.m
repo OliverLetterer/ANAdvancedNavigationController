@@ -25,6 +25,7 @@ const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 47
 @synthesize leftViewController=_leftViewController, viewControllers=_viewControllers, removeRectangleIndicatorView=_removeRectangleIndicatorView;
 @synthesize delegate=_delegate;
 @synthesize draggingStartDate=_draggingStartDate;
+@synthesize isFirstViewControllerViewOverdraggedToLeft = _isFirstViewControllerViewOverdraggedToLeft;
 
 #pragma mark - setters and getters
 

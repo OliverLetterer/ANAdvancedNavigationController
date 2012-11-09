@@ -154,11 +154,11 @@
             [viewController didMoveToParentViewController:self];
             _indexOfFrontViewController = self.viewControllers.count-1;
         }
-        
-        if ([self.delegate respondsToSelector:@selector(advancedNavigationController:leftViewIsOverlapped:)]) {
-            UIViewController *firstRightViewController = [self.viewControllers objectAtIndex:0];
-            [self.delegate advancedNavigationController:self isLeftViewOverlapped:(firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset)];
-        }
+
+        [self willChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+        UIViewController *firstRightViewController = [self.viewControllers objectAtIndex:0];
+        _isfirstViewControllerViewOverdraggedToLeft = (firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset);
+        [self didChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
     }
 }
 
@@ -344,10 +344,10 @@
         }];
     }
     
-    if ([self.delegate respondsToSelector:@selector(advancedNavigationController:leftViewIsOverlapped:)]) {
-        UIViewController *firstRightViewController = [self.viewControllers objectAtIndex:0];
-        [self.delegate advancedNavigationController:self isLeftViewOverlapped:(firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset)];
-    }
+    [self willChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+    UIViewController *firstRightViewController = [self.viewControllers objectAtIndex:0];
+    _isfirstViewControllerViewOverdraggedToLeft = (firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset);
+    [self didChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
 }
 
 #pragma mark - Panning

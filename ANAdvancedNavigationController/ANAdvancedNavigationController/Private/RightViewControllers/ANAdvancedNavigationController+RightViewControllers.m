@@ -404,6 +404,12 @@
                                                
                                                previousViewController = currentViewController;
                                                
+                                               if (idx == 0) {
+                                                   [self willChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+                                                   _isfirstViewControllerViewOverdraggedToLeft = (view.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset);
+                                                   [self didChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+                                               }
+                                               
                                                if (count > 1 && idx == 0) {
                                                    // first viewController has moved enough to the right
                                                    if (currentCenter.x > minDragOffsetToShowRemoveInformation) {

@@ -43,6 +43,15 @@ const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 47
     }
 }
 
+- (BOOL)isFirstViewControllerViewOverdraggedToLeft
+{
+    if (self.viewControllers.count > 0) {
+        UIViewController *firstRightViewController = [self.viewControllers objectAtIndex:0];
+        return firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset;
+    }
+    return NO;
+}
+
 - (NSArray *)rightViewControllers {
     return [_viewControllers copy];
 }

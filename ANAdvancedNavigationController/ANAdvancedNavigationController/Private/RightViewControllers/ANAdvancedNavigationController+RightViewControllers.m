@@ -154,11 +154,13 @@
             [viewController didMoveToParentViewController:self];
             _indexOfFrontViewController = self.viewControllers.count-1;
         }
-
-        [self willChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+ 
         UIViewController *firstRightViewController = [self.viewControllers objectAtIndex:0];
-        _isfirstViewControllerViewOverdraggedToLeft = (firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset);
-        [self didChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+        if (_isfirstViewControllerViewOverdraggedToLeft != (firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset)) {
+            [self willChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+            _isfirstViewControllerViewOverdraggedToLeft = (firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset);
+            [self didChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+        }
     }
 }
 
@@ -344,10 +346,12 @@
         }];
     }
     
-    [self willChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
     UIViewController *firstRightViewController = [self.viewControllers objectAtIndex:0];
-    _isfirstViewControllerViewOverdraggedToLeft = (firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset);
-    [self didChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+    if (_isfirstViewControllerViewOverdraggedToLeft != (firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset)) {
+        [self willChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+        _isfirstViewControllerViewOverdraggedToLeft = (firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset);
+        [self didChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
+    }
 }
 
 #pragma mark - Panning
@@ -404,7 +408,7 @@
                                                
                                                previousViewController = currentViewController;
                                                
-                                               if (idx == 0) {
+                                               if (idx == 0 && _isfirstViewControllerViewOverdraggedToLeft != (view.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset)) {
                                                    [self willChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];
                                                    _isfirstViewControllerViewOverdraggedToLeft = (view.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset);
                                                    [self didChangeValueForKey:@"isfirstViewControllerViewOverdraggedToLeft"];

@@ -25,6 +25,7 @@ const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 47
 @synthesize leftViewController=_leftViewController, viewControllers=_viewControllers, removeRectangleIndicatorView=_removeRectangleIndicatorView;
 @synthesize delegate=_delegate;
 @synthesize draggingStartDate=_draggingStartDate;
+@synthesize isFirstViewControllerViewOverdraggedToLeft = _isFirstViewControllerViewOverdraggedToLeft;
 
 #pragma mark - setters and getters
 
@@ -40,6 +41,15 @@ const CGFloat ANAdvancedNavigationControllerDefaultDraggingDistance         = 47
         _backgroundView = backgroundView;
         [self updateBackgroundView];
     }
+}
+
+- (BOOL)isFirstViewControllerViewOverdraggedToLeft
+{
+    if (self.viewControllers.count > 0) {
+        UIViewController *firstRightViewController = [self.viewControllers objectAtIndex:0];
+        return firstRightViewController.view.superview.frame.origin.x <= ANAdvancedNavigationControllerDefaultLeftPanningOffset;
+    }
+    return NO;
 }
 
 - (NSArray *)rightViewControllers {

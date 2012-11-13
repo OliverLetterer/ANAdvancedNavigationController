@@ -31,13 +31,17 @@ extern const CGFloat ANAdvancedNavigationControllerDefaultLeftPanningOffset;
 
 
 
-@interface ANAdvancedNavigationController : UIViewController
+@interface ANAdvancedNavigationController : UIViewController {
+    BOOL _isfirstViewControllerViewOverdraggedToLeft;
+}
 
 @property (nonatomic, retain) UIView *backgroundView;
 @property (nonatomic, retain) UIViewController *leftViewController;
 @property (nonatomic, readonly, copy) NSArray *rightViewControllers;
 
 @property (nonatomic, weak) id<ANAdvancedNavigationControllerDelegate> delegate;
+
+@property (nonatomic, readonly) BOOL isFirstViewControllerViewOverdraggedToLeft;
 
 - (id)initWithLeftViewController:(UIViewController *)leftViewController;
 - (id)initWithLeftViewController:(UIViewController *)leftViewController rightViewControllers:(NSArray *)rightViewControllers;
